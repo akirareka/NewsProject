@@ -2,9 +2,7 @@
 
 <p align="center"> </p>
 
-## About 
-
-How to run :
+## How to run
 
 composer install
 php artisan key:generate
@@ -22,10 +20,6 @@ News Update adalah ...
 * [Bootstrap](https://getbootstrap.com/)
 * [Figma](https://www.figma.com/)
 
-## Getting Started
-
-### Prerequisites
-
 ## Credits
 
 | NPM           | Name        |
@@ -35,5 +29,3 @@ News Update adalah ...
 | 140810190062  | Hilmi |
 | 140810190068  | Fadhillah Akbar I |
 | 140810190070  | Marcus |
-
-## License
