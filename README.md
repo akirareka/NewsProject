@@ -9,13 +9,17 @@
 
 ## Cara menjalankan
 
-install composer pada device anda.
+Install composer pada device anda.
 
-jalankan command "composer install".
+Jalankan command "composer install".
 
-jalankan command "php artisan key:generate".
+Jalankan command "php artisan key:generate".
 
-jalankan command "php artisan serve".
+Buat database dengan nama "NewsUpdate" pada phpMyAdmin
+
+Jalankan command "php artisan migrate:fresh".
+
+Jalankan command "php artisan serve".
 
 ## About Laravel
 
