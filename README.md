@@ -10,7 +10,10 @@ php artisan key:generate.
 
 buat database di phpMyAdmin bernama "newsupdate".
 
+setting .env "DB_DATABASE=NewsUpdate"
+
 php artisan migrate.
+
 
 php artisan serve.
     
