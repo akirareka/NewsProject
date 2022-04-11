@@ -1,0 +1,7 @@
+{
+    "require": {
+        "laravel/laravel": "^8.6",
+        "laravel/ui": "^3.4",
+        "laravel/installer": "^4.2"
+    }
+}
