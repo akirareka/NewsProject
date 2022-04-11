@@ -4,11 +4,11 @@
 
 ## How to run
 
-composer install
-php artisan key:generate
-buat database di phpMyAdmin bernama "newsupdate"
-php artisan migrate
-php artisan serve
+composer install.
+php artisan key:generate.
+buat database di phpMyAdmin bernama "newsupdate".
+php artisan migrate.
+php artisan serve.
 ## About 
 
 News Update adalah ...
