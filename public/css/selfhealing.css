@@ -1,0 +1,146 @@
+/** {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-size: 14px;
+    background-color: #ededed;
+  }
+  */
+  #atas {
+    width: 1200px;
+    height: 500px;
+    opacity: 1;
+    position: relative;
+    top: -30px;
+    left: -200px;
+    overflow: hidden;
+  }
+  
+  #judul {
+    width: 820px;
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 60px;
+    font-family: Nunito;
+    font-weight: Regular;
+    font-size: 37px;
+    opacity: 1;
+    text-align: left;
+  }
+  
+  #tulisan {
+    width: 530px;
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 140px;
+    left: 2px;
+    font-family: Nunito;
+    font-weight: Regular;
+    font-size: 23px;
+    opacity: 1;
+    text-align: justify;
+  }
+  
+  #orgpusing {
+    width: 1300px;
+    height: 500px;
+    /*background-image: url("{{ asset('img/abc1.png') }}");*/
+    background-repeat: no-repeat;
+    background-position: left 650px top 50%;
+    background-size: 37%;
+  }
+  
+  #bagiantengah {
+    width: 1000px;
+    height: 1000px;
+    opacity: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .layanan1 {
+    width: 500px;
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 90px;
+    left: 300px;
+    font-family: Nunito;
+    font-weight: Regular;
+    font-size: 23px;
+    opacity: 1;
+    text-align: justify;
+  }
+  
+  #kotakbiru1 {
+    width: 200px;
+    height: 200px;
+    background: rgba(49, 100, 244, 1);
+    opacity: 1;
+    position: relative;
+    top: 80px;
+    left: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    background-image: url("./layanan1.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .layanan2 {
+    width: 500px;
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 415px;
+    left: 300px;
+    font-family: Nunito;
+    font-weight: Regular;
+    font-size: 23px;
+    opacity: 1;
+    text-align: justify;
+  }
+  
+  #kotakbiru2 {
+    width: 200px;
+    height: 200px;
+    background: rgba(49, 100, 244, 1);
+    opacity: 1;
+    position: relative;
+    top: 400px;
+    left: -140px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    background-image: url("./play.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .joinnow {
+    width: 300px;
+    height: 55px;
+    color: rgba(255, 255, 255, 1);
+    background-color: #585858;
+    border-radius: 10px;
+    position: relative;
+    top: 800px;
+    left: -100px;
+    font-family: Nunito;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: center;
+  }
+  
+  .joinnow:hover {
+    opacity: 0.9;
+  }

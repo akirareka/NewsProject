@@ -1,0 +1,187 @@
+body {
+    background-color: #ededed;
+  }
+  
+  .container{
+    display: flex;
+  }
+  
+  h2 {
+    width: 900px;
+    color: rgba(0, 0, 0, 1);
+    position: relative;
+    top: 70px;
+    left: -30px;
+    font-family: Nunito;
+    font-weight: Regular;
+    opacity: 1;
+    text-align: center;
+  }
+
+  #box{
+    width: 600px;
+    height: 360px;
+    top: -90px;
+    right: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .v98_81 {
+    width: 500px;
+    color: rgba(0, 0, 0, 1);
+    position: relative;
+    top: 320px;
+    left: 130px;
+    font-family: Nunito;
+    font-weight: Regular;
+    font-size: 25px;
+    opacity: 1;
+    text-align: left;
+  }
+  
+  .kotakbiru1 {
+    width: 100px;
+    height: 100px;
+    background: rgba(49, 100, 244, 1);
+    opacity: 1;
+    position: relative;
+    top: 330px;
+    left: 130px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    background-image: url("./play.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .kotakbiru2 {
+    width: 100px;
+    height: 100px;
+    background: rgba(49, 100, 244, 1);
+    opacity: 1;
+    position: relative;
+    top: 330px;
+    left: 130px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    background-image: url("./layanan1.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .firstvideo {
+    width: 500px;
+    color: rgba(0, 0, 0, 1);
+    position: relative;
+    top: 260px;
+    left: 270px;
+    font-family: Nunito;
+    font-weight: Regular;
+    font-size: 25px;
+    opacity: 1;
+    text-align: left;
+  }
+  
+  .firstmodul {
+    width: 500px;
+    color: rgba(0, 0, 0, 1);
+    position: relative;
+    top: 260px;
+    left: 270px;
+    font-family: Nunito;
+    font-weight: Regular;
+    font-size: 25px;
+    opacity: 1;
+    text-align: left;
+  }
+
+  #bawah{
+    height: 500px;
+    position: relative;
+  }
+
+  #myBtn {
+    height: 50px;
+    position: relative;
+    top: 300px;
+    left: 400px;
+    font-size: 18px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #585858;
+    display: inline-block;
+    border-radius: 10px solid #000;
+    border-radius: 10px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Modal Content */
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 20px;
+  }
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .test {
+    font-size: 18px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #585858;
+    display: inline-block;
+    border-radius: 10px solid #000;
+    border-radius: 10px;
+  }
+  
+  .test:hover {
+    opacity: 0.9;
+  }
