@@ -10,9 +10,12 @@
 ## Cara menjalankan
 
 install composer pada device anda.
-jalankan command "composer install"
-jalankan command "php artisan key:generate"
-jalankan command "php artisan serve"
+
+jalankan command "composer install".
+
+jalankan command "php artisan key:generate".
+
+jalankan command "php artisan serve".
 
 ## About Laravel
 
