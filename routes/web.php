@@ -17,10 +17,10 @@ use App\Http\Controllers\Admin\ArtikelsController;
 Auth::routes();
 
 //USER
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/artikel', [App\Http\Controllers\ArtikelController::class, 'index']);
+Route::get('/', [App\Http\Controllers\ArtikelController::class, 'index']);
+Route::get('/home', [App\Http\Controllers\ArtikelController::class, 'index']);
 Route::get('/artikel/read/{id}', [App\Http\Controllers\ArtikelController::class, 'read'])->name('artikel_read');
-Route::get('/profile/view/{id}', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile.view');
+Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile.view');
 Route::get('/profile/edit/{id}', [App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
 Route::put('/profile/update', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
 

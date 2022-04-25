@@ -80,28 +80,14 @@
             <!-- Logo -->
             <div class="col">
               <a href="/">
-                <img src="{{ asset('images/Logo_NoBG.png') }}" alt="Logo I'm Okay!" height=50>
+                <img src="" alt="LOGO NEWSUPDATE" height=50>
               </a>
             </div>
             <!-- Links Kiri -->
+
             <div class="col">
-              <a class="nav" href="{{ url('/') }}">Beranda</a>
+              <a class="nav" href="#">Test</a>
             </div>
-            <div class="col-4">
-              <a class="nav" href="{{ url('/selfhealing') }}">Self-Healing Program</a>
-            </div>
-            <div class="col">
-              <a class="nav" href="{{ url('/artikel') }}">Artikel</a>
-            </div>
-            @if(Auth::check())
-              <div class="col">
-                <a class="nav" href="{{ url('/konseling') }}">Konseling</a>
-              </div>
-            @else
-                <div class="col">
-                  <a class="nav" href="{{ url('/login') }}">Konseling</a>
-                </div>
-              @endif
           </div>
         </div>
 
@@ -130,7 +116,7 @@
             {{ Auth::user()->name }}<i class="fa fa-user-circle mx-2" style="font-size: 25px;"></i>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
-            <li><a class="dropdown-item" href="/profile/view/{{ Auth::user()->id}}">Profile</a></li>
+            <li><a class="dropdown-item" href="/profile">Profile</a></li>
             <li>
               <a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
@@ -160,58 +146,6 @@
     </div>
   </div>
   <!-- END MAIN -->
-
-  <!-- START FOOTER -->
-  <footer class="text-center text-lg-start bg-dark">
-    <div class="container text-md-start mt-5">
-      <div class="row mt-3">
-        <!-- Logo -->
-        <div class="col-8 mx-auto mb-4">
-          <img src="{{ asset('images/Logo_NoBG.png') }}" alt="Logo I'm Okay!" width=300>
-        </div>
-        <!-- Kolom kanan 1 -->
-        <div class="col-2 mx-auto mb-4">
-          <p class="h6 text-uppercase fw-bold mb-4">
-            <a href="#!" class="nav">Help & Support</a>
-          </p>
-          <p class="h6 mb-4">
-            <a href="#!" class="nav">Cara Penggunaan</a>
-          </p>
-        </div>
-        <!-- Kolom kanan 2 -->
-        <div class="col-2 mx-auto mb-4">
-          <p class="h6 text-uppercase fw-bold mb-4">
-            <a href="#" class="nav">About Us</a>
-          </p>
-          <p>
-            <a href="#" class="nav">Tentang Kami</a>
-          </p>
-          <p>
-            <a href="#" class="nav">Kontak Kami</a>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer bawah -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom text-light">
-      <!-- Copyright -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Hak Cipta © 2021 I'm Okay!</span>
-      </div>
-      <!-- Social media -->
-      <div>
-        <span class="me-4">Follow us on</span>
-        <a href="#" class="me-4">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="me-4">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-    </section>
-  </footer>
-  <!-- END FOOTER -->
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

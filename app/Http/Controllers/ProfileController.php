@@ -7,10 +7,14 @@ use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 class ProfileController extends Controller
 {
-    public function index($id)
+    public function index()
+
     {
+        $id = Auth::id();
         $user = User::where('id',$id)->get();
         return view ("profile.view", compact("user"));
     }
