@@ -21,7 +21,7 @@ class ArtikelsController extends Controller
                 return view('admin.artikel.show',compact('artikel'))
                 ->with('i', (request()->input('page', 1) - 1) * 10);
             }else{
-                return redirect()->route('home')
+                return redirect()->to('home')
                         ->with('error', 'Anda tidak memiliki akses');
             }
         }else{
@@ -40,23 +40,16 @@ class ArtikelsController extends Controller
             'judul' => 'required',
             'author' => 'required',
             'isi_artikel' => 'required',
-            'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'top_news' => 'required',
         ]);
-
-        $foto = $request->file('foto');
-        $foto->storeAs('/article/img', $foto->hashName(), 'public');
-        
 
         Artikel::create([
             'judul' => $request->judul,
             'author' => $request->author,
             'isi_artikel' => $request->isi_artikel,
-            'foto' => $foto->hashName(),
             'top_news' => $request->top_news,
         ]);
-        return redirect()->route('admin.show.artikel')
-                        ->with('success', 'Artikel telah ditambahkan');
+        return redirect()->to('admin/artikel');
     }
     
     public function edit($id)
@@ -94,15 +87,13 @@ class ArtikelsController extends Controller
                 'top_news' => $request->top_news,
             ]);
         }
-        return redirect()->route('admin.show.artikel')
-                        ->with('success', 'Artikel berhasil diupdate');
+        return redirect()->to('admin/artikel');
     }
 
     public function destroy($id)
     {
         $post = Artikel::findOrFail($id);
         $post->delete();
-        return redirect()->route('admin.show.artikel')
-                        ->with('success', 'Artikel telah dihapus');
+        return redirect()->to('admin/artikel');
     }
 }

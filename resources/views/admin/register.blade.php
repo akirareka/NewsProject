@@ -8,7 +8,7 @@
                 <h5 style="text-align: center; padding: 15px">{{ __('Admin Register') }}</h5>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register_admin') }}" class="offset-md-1">
+                    <form method="POST" action="/admin/register/store" class="offset-md-1">
                         @csrf
 
                         <div class="form-group row" style="padding: 10px">

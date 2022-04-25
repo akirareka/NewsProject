@@ -21,6 +21,11 @@ class AdminController extends Controller
             return view('admin.home');
         }
     }
+
+    public function addAdmin(){
+        return view('admin.register');
+    }
+
     public function create(Request $request)
     {
         User::create([
@@ -30,6 +35,6 @@ class AdminController extends Controller
             'phone' => $request['phone'],
             'role' => 'Admin',
         ]);
-        return view('auth.login');
+        return view('admin.home');
     }
 }

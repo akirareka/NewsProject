@@ -29,7 +29,7 @@
                 <p>{{$users->email}}<br>
                 <p>{{$users->jenis_kelamin}}
                 <p>{{$users->phone}}<br><br>
-                <a href="{{ route('profile.edit',$users->id) }}" class="btn btn-primary">Edit Profile</a>
+                <a href="profile/edit/{{$users->id}}" class="btn btn-primary">Edit Profile</a>
             </div>
         </div>
     </div>

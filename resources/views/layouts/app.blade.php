@@ -75,17 +75,17 @@
   <nav class="bg-dark py-2">
     <div class="container">
       <div class="row d-flex justify-content-between align-items-center">
-        <div class="col-8">
+        <div class="col-6">
           <div class="row align-items-center">
             <!-- Logo -->
-            <div class="col">
+            <div class="col-3">
               <a href="/">
                 <img src="" alt="LOGO NEWSUPDATE" height=50>
               </a>
             </div>
             <!-- Links Kiri -->
 
-            <div class="col">
+            <div class="col-1">
               <a class="nav" href="#">Test</a>
             </div>
           </div>
@@ -98,12 +98,7 @@
           <div class="row">
             @if (Route::has('login'))
             <div class="col">
-              <a class="nav" href="{{ route('login') }}">{{ __('Login') }}</a>
-            </div>
-            @endif
-            @if (Route::has('register'))
-            <div class="col">
-              <a class="nav" href="{{ route('register') }}">{{ __('Register') }}</a>
+              <a class="nav" href="{{ route('login') }}">{{ __('Login/Register') }}</a>
             </div>
             @endif
           </div>
@@ -111,6 +106,11 @@
 
         @else
         <!-- Kalau sudah log in -->
+        @if(Auth::user()->role=='Admin')
+        <div class="col-3">
+        <a href="/admin">Halaman admin</a>
+        </div>
+        @endif
         <div class="col-3">
           <a class="nav" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" type="button">
             {{ Auth::user()->name }}<i class="fa fa-user-circle mx-2" style="font-size: 25px;"></i>

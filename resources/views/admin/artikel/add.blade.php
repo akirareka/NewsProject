@@ -1,4 +1,4 @@
-@extends('templates.t_home_admin')
+@extends('layouts.app')
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
@@ -6,7 +6,7 @@
             <h2>Add New Artikel</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('admin.show.artikel') }}"> Back</a>
+            <a class="btn btn-primary" href="/admin/artikel"> Back</a>
         </div>
     </div>
 </div>
@@ -21,7 +21,7 @@
         </ul>
     </div>
 @endif
-<form action="{{ route('admin.insert.artikel') }}" method="POST" enctype="multipart/form-data">
+<form action="/admin/artikel/add" method="POST" enctype="multipart/form-data">
     @csrf
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -39,7 +39,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Detail:</strong>
-                <textarea class="form-control" style="height:150px" name="isi_artikel" placeholder="Penjelasan Artijel"></textarea>
+                <textarea class="form-control" style="height:150px" name="isi_artikel" placeholder="Penjelasan Artikel"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

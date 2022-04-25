@@ -18,7 +18,7 @@
                         </div>
                     @endif
                     <div>
-                        <form method="POST" action="{{ route('profile.update')}}" class="offset-md-1 col" enctype="multipart/form-data">
+                        <form method="POST" action="/profile/update" class="offset-md-1 col" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="form-text row">

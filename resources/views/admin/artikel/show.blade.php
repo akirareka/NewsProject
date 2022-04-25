@@ -1,7 +1,7 @@
-@extends('templates.t_home_admin')
+@extends('layouts.app')
 @section('content')
 <div class="pull-right">
-    <a class="btn btn-primary" href="{{ route('admin.add.artikel') }}"> Add New Artikel</a>
+    <a class="btn btn-primary" href="/admin/artikel/insert"> Add New Artikel</a>
 </div>
     <table class="table table-bordered">
         <tr>
@@ -19,11 +19,11 @@
             <td>{{ $artikels->judul }}</td>
             <td>{{ $artikels->author }}</td>
             <td>{{ $artikels->isi_artikel }}</td>
-            <td><img src="/storage/article/img/{{ $artikels->foto }}" width="100px"></td>
+            <td><img src="/storage/article/img/{{$artikels->foto }}" width="100px"></td>
             <td>{{ $artikels->top_news }}</td>
             <td>
-            <form action="{{ route('admin.artikel.destroy', $artikels->id)}}" method="POST">
-            <a class="btn btn-info btn-sm" href="{{ route('admin.artikel.edit',$artikels->id) }}">Update</a>
+            <form action="/admin/artikel/delete/{{$artikels->id}}" method="POST">
+            <a class="btn btn-info btn-sm" href="/admin/artikel/edit/{{$artikels->id}}">Update</a>
             @csrf
             @method('DELETE')
                 <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>

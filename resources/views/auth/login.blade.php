@@ -57,6 +57,14 @@
                                 </a>
                             @endif
                         </div>
+                        <div class="col-md-8" style="padding: 10px; margin-left: 120px;">
+                          
+                                <a class="btn btn-primary" href="/register">
+                                    Register
+                                </a>
+                            
+                        </div>
+                        
                             <div class="col-md-8" style="padding: 10px; margin-left: 120px;">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}

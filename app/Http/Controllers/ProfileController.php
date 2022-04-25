@@ -58,7 +58,6 @@ class ProfileController extends Controller
             ]);
 
         }
-        return redirect()->route('profile.view', $user->id)
-                        ->with('success', 'Profile Berhasil di Update');
+        return redirect()->to('/profile');
     }
 }
