@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\API\ArtikelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-  
-// custom API route
-Route::middleware('auth:api')->get('/user/get', 'UserController@get');
+Route::get('artikels', [ArtikelController::class, 'index']);
+Route::get('artikels/get/{id}', [ArtikelController::class, 'show']);
+Route::post('artikels/store', [ArtikelController::class, 'store']);
+Route::put('artikels/update/{id}', [ArtikelController::class, 'update']);
+Route::delete('artikels/delete/{id}', [ArtikelController::class, 'delete']);

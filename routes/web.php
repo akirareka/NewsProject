@@ -36,5 +36,3 @@ Route::delete('/admin/artikel/delete/{id}', [App\Http\Controllers\Admin\Artikels
 Route::get('/admin/artikel/edit/{id}', [App\Http\Controllers\Admin\ArtikelsController::class, 'edit']);
 Route::put('/admin/artikel/update', [App\Http\Controllers\Admin\ArtikelsController::class, 'update']);
 
-
-
