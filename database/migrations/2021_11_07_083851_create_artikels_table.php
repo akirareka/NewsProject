@@ -15,6 +15,7 @@ class CreateArtikelsTable extends Migration
     {
         Schema::create('artikels', function (Blueprint $table) {
             $table->id();
+            $table->string('category');
             $table->char('judul');
             $table->string('author')->nullable();
             $table->date('tanggal')->nullable();

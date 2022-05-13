@@ -14,15 +14,12 @@ class ArticlesTableSeeder extends Seeder
     public function run()
     {
         Artikel::truncate();
-
         $faker = \Faker\Factory::create();
-
-        // And now, let's create a few articles in our database:
         for ($i = 0; $i < 50; $i++) {
             Artikel::create([
                 'judul' => $faker->sentence,
                 'isi_artikel' => $faker->paragraph,
-            ]); //
+            ]);
     }
 }
 }

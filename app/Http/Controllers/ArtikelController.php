@@ -11,7 +11,7 @@ class ArtikelController extends Controller
 {
     public function index()
     {
-        $artikel= Artikel::latest()->paginate(10);
+        $artikel= Artikel::latest()->paginate(6);
         $artikelterbaru = Artikel::latest()->paginate(5);
         return view ('artikel.home',compact('artikel','artikelterbaru'))->with('i', (request()->input('page', 1) -1) * 5);
     }
