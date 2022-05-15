@@ -13,6 +13,6 @@ class Artikel extends Model
     protected $primaryKey = 'id';
     
     protected $fillable = [
-        'judul', 'author', 'isi_artikel', 'foto', 'top_news', 'status'
+        'judul', 'author', 'isi_artikel', 'foto', 'ringkasan', 'category'
     ];
 }

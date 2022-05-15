@@ -44,9 +44,10 @@ class ProfileController extends Controller
             'jenis_kelamin' => $request->jenis_kelamin,
             ]);
         }else{
-            $photo = $request->file('photo');
-            $photo->storeAs('/profil/img', $photo->hashName(), 'public');
-
+            if ($request->hasfile('photo')) {            
+                $filename = round(microtime(true) * 1000).'-'.str_replace(' ','-',$request->file('photo')->getClientOriginalName());
+                $request->file('photo')->move(public_path('images'), $filename);
+            }
             $user->update([
                 'name' => $request->name,
                 'email' => $request->email,
@@ -54,7 +55,7 @@ class ProfileController extends Controller
                 'phone' => $request->phone,
                 'tgl_lahir' => $request->tgl_lahir,
                 'jenis_kelamin' => $request->jenis_kelamin,
-                'photo' => $photo->hashName(),
+                'photo' => $filename,
             ]);
 
         }

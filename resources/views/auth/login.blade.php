@@ -112,7 +112,7 @@
                                     <div class="row align-items-start">
                                         <div class="col register">
                                             <a href="/register">
-                                                <button>Register</button>
+                                                Register
                                             </a>
                                         </div>
                                         <div class="col-1">

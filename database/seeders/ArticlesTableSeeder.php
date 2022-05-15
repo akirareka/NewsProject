@@ -18,7 +18,10 @@ class ArticlesTableSeeder extends Seeder
         for ($i = 0; $i < 50; $i++) {
             Artikel::create([
                 'judul' => $faker->sentence,
+                'author' => $faker->name,
                 'isi_artikel' => $faker->paragraph,
+                'foto' => $faker->image,
+                'ringkasan' => $faker->sentence,
             ]);
     }
 }

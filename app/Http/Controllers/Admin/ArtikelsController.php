@@ -40,14 +40,21 @@ class ArtikelsController extends Controller
             'judul' => 'required',
             'author' => 'required',
             'isi_artikel' => 'required',
-            'top_news' => 'required',
+            'category' => 'required',
+            'ringkasan' => 'required',
+            'foto' => 'required',
         ]);
-
+        if ($request->hasfile('foto')) {            
+            $filename = round(microtime(true) * 1000).'-'.str_replace(' ','-',$request->file('foto')->getClientOriginalName());
+            $request->file('foto')->move(public_path('images'), $filename);
+        }
         Artikel::create([
             'judul' => $request->judul,
+            'category' => $request->category,
             'author' => $request->author,
             'isi_artikel' => $request->isi_artikel,
-            'top_news' => $request->top_news,
+            'ringkasan' => $request->ringkasan,
+            'foto'=>$filename,
         ]);
         return redirect()->to('admin/artikel');
     }
@@ -64,16 +71,18 @@ class ArtikelsController extends Controller
             'judul' => 'required',
             'author' => 'required',
             'isi_artikel' => 'required',
-            'top_news' => 'required',
+            'category' => 'required',
+            'ringkasan' => 'required',
         ]);
 
         $artikel = Artikel::findOrFail($request->id);
         if($request->file('foto') == ""){
             $artikel->update([
             'judul' => $request->judul,
+            'category' => $request->category,
             'author' => $request->author,
             'isi_artikel' => $request->isi_artikel,
-            'top_news' => $request->top_news,
+            'ringkasan' => $request->ringkasan,
             ]);
         }else{
             $foto = $request->file('foto');
@@ -81,10 +90,11 @@ class ArtikelsController extends Controller
 
             $artikel->update([
                 'judul' => $request->judul,
+                'category' => $request->category,
                 'author' => $request->author,
                 'isi_artikel' => $request->isi_artikel,
                 'foto' => $foto->hashName(),
-                'top_news' => $request->top_news,
+                'ringkasan' => $request->ringkasan,
             ]);
         }
         return redirect()->to('admin/artikel');

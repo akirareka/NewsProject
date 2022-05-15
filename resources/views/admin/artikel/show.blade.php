@@ -18,8 +18,9 @@
             <td>{{ ++$i }}</td>
             <td>{{ $artikels->judul }}</td>
             <td>{{ $artikels->author }}</td>
-            <td><img src="/storage/article/img/{{$artikels->foto }}" width="100px"></td>
-            <td>{{ $artikels->top_news }}</td>
+            <td><img src="{{url("/images/{$artikels->foto}")}}" width="100px" alt="Images">
+        </td>
+            <td>{{ $artikels->ringkasan }}</td>
             <td>
                 <form action="/admin/artikel/delete/{{$artikels->id}}" method="POST">
                     <a class="btn btn-info btn-sm" href="/admin/artikel/edit/{{$artikels->id}}">Update</a>

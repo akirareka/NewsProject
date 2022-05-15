@@ -12,26 +12,33 @@ class ArtikelController extends Controller
     public function index()
     {
         $artikel= Artikel::latest()->paginate(6);
-        $artikelterbaru = Artikel::latest()->paginate(5);
-        return view ('artikel.home',compact('artikel','artikelterbaru'))->with('i', (request()->input('page', 1) -1) * 5);
+        return view ('artikel.home',['artikel'=>$artikel]);
     }
 
-    public function create()
+    public function edukasi()
     {
-        return view('artikel.add');
+        $artikel= Artikel::where('Category','Edukasi')->get();
+        return view ('artikel.home',['artikel'=>$artikel]);
     }
-
-    public function store(Request $request)
+    public function kesehatan()
     {
-        // insert data ke table pegawai
-        DB::table('artikels')->insert([
-            'judul' => $request->judul,
-            'isi_artikel' => $request->isi,
-            
-                    ]);
-        // alihkan halaman ke halaman pegawai
-        return redirect('/artikel');
-     
+        $artikel= Artikel::where('Category','Kesehatan')->get();
+        return view ('artikel.home',['artikel'=>$artikel]);
+    }
+    public function otomotif()
+    {
+        $artikel= Artikel::where('Category','Otomotif')->get();
+        return view ('artikel.home',['artikel'=>$artikel]);
+    }
+    public function sport()
+    {
+        $artikel= Artikel::where('Category','Sport')->get();
+        return view ('artikel.home',['artikel'=>$artikel]);
+    }
+    public function teknologi()
+    {
+        $artikel= Artikel::where('Category','Teknologi')->get();
+        return view ('artikel.home',['artikel'=>$artikel]);
     }
 
     public function read($id)
@@ -39,30 +46,5 @@ class ArtikelController extends Controller
         $artikel = DB::table('artikels')->where('id',$id)->get();
         return view('artikel.artikel',['artikel'=>$artikel]);
     }
-    public function edit($id)
-    {
-      
-        $artikel = DB::table('artikels')->where('id',$id)->get();
-        return view('artikel.edit',['artikel' => $artikel]);
-     
-    }
-    public function update(Request $request)
-    {
-	// update data pegawai
-    Artikel::where('id',$request->id)->update([
-		'judul' => $request->judul,
-        'isi_artikel' => $request->isi,
-	]);
-	// alihkan halaman ke halaman pegawai
-	return redirect()->to('artikel/read/'.$request->id)->withErrors(['msg' => 'Artikel berhasil diedit']);;
-    }
-
-    public function delete($id)
-{
-	// menghapus data pegawai berdasarkan id yang dipilih
-	DB::table('artikels')->where('id',$id)->delete();
-		
-	// alihkan halaman ke halaman pegawai
-	return redirect('/artikel');
-}
+    
 }

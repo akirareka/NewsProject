@@ -23,7 +23,19 @@
 @endif
 <form action="/admin/artikel/add" method="POST" enctype="multipart/form-data">
     @csrf
-     <div class="row">
+        <div class="row"><div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Category :</strong>
+                <select name="category" id="">
+                    <option value="" selected disabled hidden>Choose here</option>
+                    <option value="Edukasi">Edukasi</option>
+                    <option value="Kesehatan">Kesehatan</option>
+                    <option value="Otomotif">Otomotif</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Teknologi">Teknologi</option>
+                </select>
+            </div>
+        </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Judul:</strong>
@@ -51,7 +63,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Top News:</strong>
-                <input type="text" name="top_news" class="form-control" placeholder="Ringkasan News">
+                <input type="text" name="ringkasan" class="form-control" placeholder="Ringkasan News">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center submit">

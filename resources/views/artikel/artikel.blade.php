@@ -19,7 +19,7 @@
         <p class="h1">{{$a->judul}}</p>
     </div>
     <div class="col-12 text-center mb-5">
-        <img class="artikel" src="/storage/article/img/{{ $a->foto }}" width="100%" alt="{{$a->judul}}">
+        <img class="artikel" src="{{url("/images/{$a->foto}")}}" width="100" alt="Foto {{$a->judul}}">
     </div>
     <div class="col-12 mb-5">
         <div class="card">
@@ -29,25 +29,4 @@
         </div>
     </div>
 @endforeach
-
-@endsection
-
-@section('content')
-
-@foreach($artikel as $a)
-    <div class="col-12 text-center mb-5">
-        <p class="h1">{{$a->judul}}</p>
-    </div>
-    <div class="col-12 text-center mb-5">
-        <img class="artikel" src="/storage/article/img/{{ $a->foto }}" width="100%" alt="{{$a->judul}}">
-    </div>
-    <div class="col-12 mb-5">
-        <div class="card">
-            <div class="card-body text-justify">
-                {{ $a->isi_artikel }} 
-            </div>
-        </div>
-    </div>
-@endforeach
-
 @endsection

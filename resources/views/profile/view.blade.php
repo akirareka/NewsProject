@@ -22,7 +22,7 @@
     <div class="card-body">
         <div class="row">
             <div class="col-12 text-center">
-                <img src="/storage/profil/img/{{ $users->photo }}" width="150px">
+                <img src="{{url("/images/{$users->photo}")}}" width="150px">
             </div>
             <div class="col-12 editprofile" >
                 <center><p class="h1 card-title">{{ $users->name }}</p><center>

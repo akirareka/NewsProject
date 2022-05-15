@@ -25,7 +25,20 @@
 @csrf
 @method('PUT')
      <div class="row">
-     <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="row"><div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Category :</strong>
+                <select name="category" id="">
+                    <option value="" selected disabled hidden>Choose here</option>
+                    <option value="Edukasi">Edukasi</option>
+                    <option value="Kesehatan">Kesehatan</option>
+                    <option value="Otomotif">Otomotif</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Teknologi">Teknologi</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <input type="hidden" name="id" class="form-control" value="{{$artikel->id}}">
             </div>
@@ -57,7 +70,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Top News:</strong>
-                <input type="text" name="top_news" class="form-control" placeholder="Ringkasan News" value="{{$artikel->top_news}}">
+                <input type="text" name="ringkasan" class="form-control" placeholder="Ringkasan News" value="{{$artikel->ringkasan}}">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

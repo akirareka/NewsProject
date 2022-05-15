@@ -22,6 +22,11 @@ Auth::routes();
 //USER
 Route::get('/', [ArtikelController::class, 'index']);
 Route::get('/home', [ArtikelController::class, 'index']);
+Route::get('/edukasi', [ArtikelController::class, 'edukasi']);
+Route::get('/kesehatan', [ArtikelController::class, 'kesehatan']);
+Route::get('/otomotif', [ArtikelController::class, 'otomotif']);
+Route::get('/sport', [ArtikelController::class, 'sport']);
+Route::get('/teknologi', [ArtikelController::class, 'teknologi']);
 Route::get('/artikel/read/{id}', [ArtikelController::class, 'read']);
 Route::get('/profile', [ProfileController::class, 'index']);
 Route::get('/profile/edit/{id}', [ProfileController::class, 'edit']);
