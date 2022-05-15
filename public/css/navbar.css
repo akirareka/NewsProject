@@ -1,0 +1,52 @@
+.navbar .logo1 img {
+
+    margin-left: px;
+    width: 200px;
+    height: 107px;
+}
+.navbar .logo2 img{
+    margin-left: 20px;
+
+}
+
+.navbar .container a {
+    font-weight: bold;
+    color: black;
+    
+}
+.navbar .container ul li a {
+    font-weight: bold;
+    color: black;
+    margin-right:50px;
+}
+
+.navbar form{
+    border: 4px;
+    border-style:solid ;
+    border-color: #E5E5E5;
+    border-radius: 10px;
+    background-color: #E5E5E5;
+}
+.navbar input {
+
+    width: 528px;
+    height: 58px;
+    border: none;
+    border-style: none;
+    outline: none;
+    margin-left: 20px;
+    background-color: #E5E5E5;
+}
+
+.navbar button{
+    border: none;
+    outline: none;
+    background-color: #E5E5E5;
+    margin-right: 30px;
+    color: #adafaf;
+}
+
+.dropdown-menu li a{
+    font-weight: bold;
+    
+}

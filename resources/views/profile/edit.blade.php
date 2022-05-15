@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" style="margin-bottom: 30px;">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
@@ -118,8 +118,8 @@
                                     </div>
                                 </div>
                                 
-                                <div class="form-group row col-md-3">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                <div class="form-group row col-md-3 editprofile">
+                                    <button type="submit" >Submit</button>
                                 </div>
                             </div>
                         </form>

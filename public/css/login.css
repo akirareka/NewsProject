@@ -1,0 +1,57 @@
+.login img {
+    margin-left: 50%;
+    margin-top: 20%;
+    width: 150px;
+    height: 250px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.col .login h5 {
+    color: black;
+    font-weight: bold;
+
+}
+
+.register button {
+    width: 200px;
+    height: 30px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 22px;
+}
+
+.login button {
+    width: 200px;
+    height: 30px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+
+.register img {
+    margin-left: 50%;
+    margin-top: 30%;
+    width: 150px;
+    height: 250px;
+}
+
+.register1 button {
+    width: 200px;
+    height: 30px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 50%;
+
+}
+
+/* #2D2E33; */

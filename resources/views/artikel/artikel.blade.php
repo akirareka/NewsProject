@@ -15,7 +15,7 @@
 @section('content')
 
 @foreach($artikel as $a)
-    <div class="col-12 text-center mb-5">
+    <div class="col-3 text-center mb-5">
         <p class="h1">{{$a->judul}}</p>
     </div>
     <div class="col-12 text-center mb-5">

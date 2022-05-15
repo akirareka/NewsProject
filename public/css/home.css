@@ -1,0 +1,13 @@
+.news h2{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.news p{
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 1.1;
+}

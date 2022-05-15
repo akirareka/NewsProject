@@ -1,11 +1,13 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <a href="/admin/artikel">Artikel</a>
+<div class="container" style="margin-bottom: 150px ;">
+    <div class="row justify-content-center buttonadmin">
+        <a href="/admin/artikel">
+            <button>Artikel</button></a>
     </div>
-    <div class="row justify-content-center">
-        <a href="/admin/register">Daftarkan admin</a>
+    <div class="row justify-content-center buttonadmin">
+        <a href="/admin/register">
+            <button>Daftarkan admin</button></a>
     </div>
 </div>
 @endsection

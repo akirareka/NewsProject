@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('content')
 <div class="row">
-    <div class="col-lg-12 margin-tb">
+    <div class="col-lg-12 margin-tb addadmin">
         <div class="pull-left">
             <h2>Add New Artikel</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="/admin/artikel"> Back</a>
+            <a class="backadmin" href="/admin/artikel"><button>Back</button></a>
         </div>
     </div>
 </div>
@@ -54,7 +54,7 @@
                 <input type="text" name="top_news" class="form-control" placeholder="Ringkasan News">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center submit">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>
