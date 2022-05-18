@@ -70,7 +70,7 @@ object-position: center;
                                     <a href="/artikel/read/{{$a->id}}"> <img src="{{url("/images/{$a->foto}")}}" width="100px" alt="Images"></a>
                                 </div>
                                 <div class="col news" style="">
-                                    <t>{{$a->created_at->format('d/m/Y H:i') }}</t>
+                                    <t>{{$a->created_at}}</t>
                                 </div>
                             </div>
                         </div>

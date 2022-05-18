@@ -55,9 +55,11 @@
         <div class="container ">
             <a class="navbar-brand logo1" href="/"><img class="logo1" style="margin-right: 10px;"
                     src="/img/Group 73.png"></a>
-            <form class="navbarsearch">
-                <input type="text" class="input" placeholder="Seacrh"><button class="src"><i
-                        class="fa-solid fa-magnifying-glass"></i></button>
+            <form class="navbarsearch"action="/search" method="GET" >
+                <input type="text" name="keywords" class="input" placeholder="Search">
+                <button class="src">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
             </form>
             <div style="margin-left:10px;">
                 <a href="">

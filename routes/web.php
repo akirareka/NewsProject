@@ -22,6 +22,7 @@ Auth::routes();
 //USER
 Route::get('/', [ArtikelController::class, 'index']);
 Route::get('/home', [ArtikelController::class, 'index']);
+Route::get('/search', [ArtikelController::class, 'find']);
 Route::get('/edukasi', [ArtikelController::class, 'edukasi']);
 Route::get('/kesehatan', [ArtikelController::class, 'kesehatan']);
 Route::get('/otomotif', [ArtikelController::class, 'otomotif']);

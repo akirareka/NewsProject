@@ -15,6 +15,15 @@ class ArtikelController extends Controller
         return view ('artikel.home',['artikel'=>$artikel]);
     }
 
+    public function find(Request $request)
+    {
+        $keywords= $request->keywords;
+        $artikel= DB::table('artikels')
+		->where('judul','like',"%".$keywords."%")
+		->paginate();
+        return view ('artikel.home',['artikel'=>$artikel]);
+    }
+
     public function edukasi()
     {
         $artikel= Artikel::where('Category','Edukasi')->get();
