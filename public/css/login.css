@@ -53,5 +53,17 @@ body {
     margin-left: 50%;
 
 }
+.register a  {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    margin-left: 10%;
+    
+
+}
 
 /* #2D2E33; */

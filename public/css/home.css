@@ -11,3 +11,11 @@
     font-size: 15px;
     line-height: 1.1;
 }
+
+.news img{
+    margin-top: 40%;
+}
+
+.kolomartikel div{
+    border-color: gray;
+}

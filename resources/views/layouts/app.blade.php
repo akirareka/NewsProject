@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="{{asset('/css/admin.css')}}">
     <link rel="stylesheet" href="{{asset('/css/addadmin.css')}}">
     <link rel="stylesheet" href="{{asset('/css/editprofile.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/artikel.css')}}">
 
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/slick/slick.css') }}" />
@@ -155,17 +156,12 @@
 
     <!-- START MAIN -->
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col">
+    <div >
+
                 @yield('content')
-            </div>
-        </div>
+
     </div>
 
-    <div>
-        @yield('home')
-    </div>
     <footer class="jumbotron-fluid " id="Footer">
         <div class="container">
             <div class="row">

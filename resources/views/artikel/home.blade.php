@@ -30,8 +30,6 @@ object-position: center;
     <!-- Caousel Start -->
     <div class="col text-center mb-5">
         <p class="h1">TOPIK TERKINI</p>
-        <div class="gerak">
-        </div>
     </div>
     <!-- Caousel End -->
 
@@ -51,16 +49,16 @@ object-position: center;
 </div>
 <div class="container" style="margin-bottom: 20px;">
         <div class="row">
-            <div class="col-9">
+            <div class="col-9" >
                 
-                <div class="container">
+                <div class="container" >
                     
-                    <div class="row row-cols-2">
+                    <div class="row row-cols-2" >
                     @foreach($artikel as $a)
-                        <div class="col">
-                            <div class="row">
+                        <div class="col kolomartikel">
+                            <div class="row" style="border-style:solid ; margin:5px; border-radius:5px;">
                                 
-                                <div class="col col-lg-8 news" style="border-style:solid ;">
+                                <div class="col col-lg-8 news" style=" height:200px ;">
                                     <a href="/artikel/read/{{$a->id}}">
                                         <h2>
                                             {{$a->judul}}
@@ -68,10 +66,10 @@ object-position: center;
                                         <p>{{$a->ringkasan}}</p>
                                     </a>
                                 </div>
-                                <div class="col-4 news" style="border-style:solid ;">
+                                <div class="col-4 news" style="">
                                     <a href="/artikel/read/{{$a->id}}"> <img src="{{url("/images/{$a->foto}")}}" width="100px" alt="Images"></a>
                                 </div>
-                                <div class="col news" style="border-style:solid ;">
+                                <div class="col news" style="">
                                     <t>{{$a->created_at->format('d/m/Y H:i') }}</t>
                                 </div>
                             </div>

@@ -110,27 +110,28 @@
                                 </div>
                                 <div class="container">
                                     <div class="row align-items-start">
-                                        <div class="col register">
-                                            <a href="/register">
-                                                Register
-                                            </a>
-                                        </div>
-                                        <div class="col-1">
-                                            <a href="">or</a>
-                                        </div>
                                         <div class="col .login">
                                             <button type="submit">
                                                 {{ __('Login') }}
                                             </button>
                                         </div>
-                                    </div>
-                                </div>
                             </form>
+                            <div class="col-1">
+                                <a href="">or</a>
+                            </div>
+                            <div class="col register">
+                                <a href="/register" class="btn">
+                                    Register 
+                                </a>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 
     <footer class="jumbotron-fluid " id="Footer">
