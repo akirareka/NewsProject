@@ -17,10 +17,8 @@ class ArtikelController extends Controller
 
     public function find(Request $request)
     {
-        $keywords= $request->keywords;
-        $artikel= DB::table('artikels')
-		->where('judul','like',"%".$keywords."%")
-		->paginate();
+        $s= $request->s;
+        $artikel= Artikel::where('judul', 'like', "%".$s."%")->get();
         return view ('artikel.home',['artikel'=>$artikel]);
     }
 

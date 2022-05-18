@@ -12,6 +12,8 @@ class Artikel extends Model
     protected $table = 'artikels';
     protected $primaryKey = 'id';
     
+    protected $dates = ['created_at'];
+
     protected $fillable = [
         'judul', 'author', 'isi_artikel', 'foto', 'ringkasan', 'category'
     ];
