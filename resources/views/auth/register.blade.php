@@ -125,12 +125,9 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row">
-                                <div class="col-md-10" style="padding-left: 25px">
-                                    <input id="doctor" type="radio" class="" name="role" required value="User"> user
-                                    <input id="user" type="radio" class="" name="role" required value="Admin"> admin
-                                </div>
-                        </div>
+                            <input type="hidden" name="role">       
+                            <input id="" type="radio" class="" name="role" required value="User"> user
+
                             <div class="form-group row register1" >
                                 <div class="col-md-6 ">
                                     <button type="submit"  >
