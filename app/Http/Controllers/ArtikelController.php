@@ -18,33 +18,33 @@ class ArtikelController extends Controller
     public function find(Request $request)
     {
         $s= $request->s;
-        $artikel= Artikel::where('artikel.judul', 'like', "%".$s."%")->get();
+        $artikel= Artikel::where('judul', 'like', "%".$s."%")->get();
         return view ('artikel.home',['artikel'=>$artikel]);
     }
 
     public function edukasi()
     {
-        $artikel= Artikel::where('artikel.Category','Edukasi')->get();
+        $artikel= Artikel::where('category','Edukasi')->get();
         return view ('artikel.home',['artikel'=>$artikel]);
     }
     public function kesehatan()
     {
-        $artikel= Artikel::where('Category','Kesehatan')->get();
+        $artikel= Artikel::where('category','Kesehatan')->get();
         return view ('artikel.home',['artikel'=>$artikel]);
     }
     public function otomotif()
     {
-        $artikel= Artikel::where('Category','Otomotif')->get();
+        $artikel= Artikel::where('category','Otomotif')->get();
         return view ('artikel.home',['artikel'=>$artikel]);
     }
     public function sport()
     {
-        $artikel= Artikel::where('Category','Sport')->get();
+        $artikel= Artikel::where('category','Sport')->get();
         return view ('artikel.home',['artikel'=>$artikel]);
     }
     public function teknologi()
     {
-        $artikel= Artikel::where('Category','Teknologi')->get();
+        $artikel= Artikel::where('category','Teknologi')->get();
         return view ('artikel.home',['artikel'=>$artikel]);
     }
 
