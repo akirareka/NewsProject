@@ -18,13 +18,13 @@ class ArtikelController extends Controller
     public function find(Request $request)
     {
         $s= $request->s;
-        $artikel= Artikel::where('judul', 'like', "%".$s."%")->get();
+        $artikel= Artikel::where('artikel.judul', 'like', "%".$s."%")->get();
         return view ('artikel.home',['artikel'=>$artikel]);
     }
 
     public function edukasi()
     {
-        $artikel= Artikel::where('Category','Edukasi')->get();
+        $artikel= Artikel::where('artikel.Category','Edukasi')->get();
         return view ('artikel.home',['artikel'=>$artikel]);
     }
     public function kesehatan()
