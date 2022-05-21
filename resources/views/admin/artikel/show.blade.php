@@ -11,7 +11,7 @@
             <th>Judul</th>
             <th>Author</th>
             <th>Foto</th>
-            <th>Top News</th>
+            <th>Tanggal</th>
             <th >Action</th>
         </tr>
         @foreach ($artikel as $artikels)
@@ -21,7 +21,7 @@
             <td>{{ $artikels->author }}</td>
             <td><img src="{{url("/images/{$artikels->foto}")}}" width="100px" alt="Images">
         </td>
-            <td>{{ $artikels->ringkasan }}</td>
+            <td>{{ $artikels->created_at->format('d-m-Y H:i')}}</td>
             <td>
                 <form action="/admin/artikel/delete/{{$artikels->id}}" method="POST">
                     <a class="btn btn-info btn-sm" href="/admin/artikel/edit/{{$artikels->id}}" style="width: 100px ;"> Update</a>
