@@ -53,20 +53,25 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 </div>
 <div class="container">
 <div class="row" >
+
+        <form action="/kritik-saran" method="post">
+        @csrf
         <div class="col-8"  style="border-style: solid ;border-radius:10px; padding: 15px; margin-left:4%; margin-bottom:20px;">
-        <h1 style="font-size: 30px ;">Kritik dan Saran</h1>
-            <div class="row" style="margin:10px">
-                <div class="col-6 col-md-2"> <img class="massage" style=" margin-top:70px ;width: 40px; height: 40px;"
-                        src="/img/mail.png" alt=""></div>
-                <div class="col">Massage<input style=" margin-top: 10px; width: 90%; height:150px;" name="massage"
-                        type="massage" class="form-control @error('massege') is-invalid @enderror" id="massege"
-                        placeholder="Massage">
+            <h1 style="font-size: 30px ;">Kritik dan Saran</h1>
+                <div class="row" style="margin:10px">
+                    <div class="col-6 col-md-2"> <img class="message" style=" margin-top:70px ;width: 40px; height: 40px;"
+                            src="/img/mail.png" alt=""></div>
+                    <div class="col">Message
+                        <input style=" margin-top: 10px; width: 90%; height:150px;" name="message"
+                            type="" class="form-control @error('message') is-invalid @enderror" id="massege"
+                            placeholder="Message">
+                    </div>
                 </div>
-            </div>
-            <div class="" style="margin-left:19.5%; margin-bottom: 10px; ">
-                <button type="submit" style="width: 500px; height: 47px; background: black; color:white; border-radius: 10px ;">send</button>
-            </div>
+                <div class="" style="margin-left:19.5%; margin-bottom: 10px; ">
+                    <button type="submit" style="width: 500px; height: 47px; background: black; color:white; border-radius: 10px ;">Send</button>
+                </div>
         </div>
+        </form>
 </div>
 @endforeach
 @endsection

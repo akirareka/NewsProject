@@ -178,7 +178,7 @@
                 <img style="margin-top: 40px;" src="/img/tw.png" alt="">
                         <img style="margin-top: 40px;" src="/img/ig.png" alt="">
                         <img style="margin-top: 40px;" src="/img/yt.png" alt="">
-                        <img style="margin-top: 40px;" src="img/fb.png" alt="">
+                        <img style="margin-top: 40px;" src="/img/fb.png" alt="">
 
                 </div>
             </div>

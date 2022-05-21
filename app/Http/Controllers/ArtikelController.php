@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artikel;
+use App\Models\Masukan;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class ArtikelController extends Controller
@@ -52,6 +54,16 @@ class ArtikelController extends Controller
     {
         $artikel = DB::table('artikels')->where('id',$id)->get();
         return view('artikel.artikel',['artikel'=>$artikel]);
+    }
+
+    public function inputMasukan(Request $request)
+    {
+        $id = Auth::id();
+        Masukan::create([
+            'user_id'=> $id,
+            'isi_pesan' => $request->message
+        ]);
+        return redirect()->to('/');
     }
     
 }

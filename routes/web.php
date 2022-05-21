@@ -29,6 +29,7 @@ Route::get('/otomotif', [ArtikelController::class, 'otomotif']);
 Route::get('/sport', [ArtikelController::class, 'sport']);
 Route::get('/teknologi', [ArtikelController::class, 'teknologi']);
 Route::get('/artikel/read/{id}', [ArtikelController::class, 'read']);
+Route::post('/kritik-saran', [ArtikelController::class, 'inputMasukan']);
 Route::get('/profile', [ProfileController::class, 'index']);
 Route::get('/profile/edit/{id}', [ProfileController::class, 'edit']);
 Route::put('/profile/update', [ProfileController::class, 'update']);
@@ -37,6 +38,7 @@ Route::put('/profile/update', [ProfileController::class, 'update']);
 
 Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/admin/register', [AdminController::class, 'addAdmin']);
+Route::get('/admin/kritik-saran', [AdminController::class, 'showMasukan']);
 Route::post('/admin/register/store', [AdminController::class, 'create']);
 
 //CRUD ARTIKEL

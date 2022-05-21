@@ -3,11 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
 use App\Models\User;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -30,6 +28,14 @@ class AdminController extends Controller
 
     public function addAdmin(){
         return view('admin.register');
+    }
+
+    public function showMasukan(){
+        $masukan= DB::table('masukan')
+        ->join('users', 'users.id', '=', 'masukan.user_id')
+        ->select('masukan.isi_pesan','users.name as user_name','users.email as user_email')
+        ->get();
+        return view('admin.masukan',['masukan'=>$masukan]);
     }
 
     public function create(Request $request)
