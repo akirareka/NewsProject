@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Artikel;
+use App\Models\Masukan;
+use Doctrine\ORM\Query\AST\WhereClause;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,7 +21,7 @@ class ArtikelsController extends Controller
     {
         if(Auth::check()){
             if(Auth::user()->role == 'Admin'){
-                $artikel = Artikel::latest()->paginate(10);
+                $artikel = Artikel::latest()->get();
                 return view('admin.artikel.show',compact('artikel'))
                 ->with('i', (request()->input('page', 1) - 1) * 10);
             }else{
@@ -44,7 +46,7 @@ class ArtikelsController extends Controller
             'isi_artikel' => 'required',
             'category' => 'required',
             'ringkasan' => 'required',
-            'foto' => 'required',
+            'foto' => 'required','mimes:jpeg,png,bmp,tiff |max:4096',
         ]);
         if ($request->hasfile('foto')) {            
             $filename = round(microtime(true) * 1000).'-'.str_replace(' ','-',$request->file('foto')->getClientOriginalName());
@@ -104,6 +106,7 @@ class ArtikelsController extends Controller
 
     public function destroy($id)
     {
+        Masukan::where('artikel_id',$id)->delete();
         $post = Artikel::findOrFail($id);
         $post->delete();
         return redirect()->to('admin/artikel');
