@@ -13,7 +13,6 @@ class ArticlesTableSeeder extends Seeder
      */
     public function run()
     {
-        Artikel::truncate();
         $faker = \Faker\Factory::create();
         for ($i = 0; $i < 50; $i++) {
             Artikel::create([

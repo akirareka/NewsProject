@@ -15,6 +15,6 @@ class Masukan extends Model
     protected $dates = ['created_at'];
 
     protected $fillable = [
-        'user_id','isi_pesan'
+        'user_id','isi_pesan','artikel_id'
     ];
 }

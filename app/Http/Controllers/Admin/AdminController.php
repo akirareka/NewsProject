@@ -33,7 +33,8 @@ class AdminController extends Controller
     public function showMasukan(){
         $masukan= DB::table('masukan')
         ->join('users', 'users.id', '=', 'masukan.user_id')
-        ->select('masukan.isi_pesan','users.name as user_name','users.email as user_email')
+        ->join('artikels', 'artikels.id', '=', 'masukan.artikel_id')
+        ->select('masukan.*','users.name as user_name','users.email as user_email','artikels.judul as artikel_judul')
         ->get();
         return view('admin.masukan',['masukan'=>$masukan]);
     }

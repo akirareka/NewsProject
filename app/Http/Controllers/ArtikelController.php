@@ -61,7 +61,8 @@ class ArtikelController extends Controller
         $id = Auth::id();
         Masukan::create([
             'user_id'=> $id,
-            'isi_pesan' => $request->message
+            'isi_pesan' => $request->message,
+            'artikel_id'=>$request->artikel_id
         ]);
         return redirect()->to('/');
     }

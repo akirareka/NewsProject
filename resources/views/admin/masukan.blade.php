@@ -7,6 +7,7 @@
             <th>No</th>
             <th>Pengirim</th>
             <th>Email</th>
+            <th>Judul artikel</th>
             <th>Isi pesan</th>
         </tr>
         @foreach($masukan as $m)
@@ -14,6 +15,7 @@
             <td>{{ $loop->iteration }}</td>
             <td>{{ $m->user_name }}</td>
             <td>{{ $m->user_email }}</td>
+            <td>{{ $m->artikel_judul }}</td>
             <td>{{ $m->isi_pesan }}</td>
         </tr>
         @endforeach

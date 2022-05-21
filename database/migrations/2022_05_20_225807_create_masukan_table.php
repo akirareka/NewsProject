@@ -17,6 +17,8 @@ class CreateMasukanTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('artikel_id');
+            $table->foreign('artikel_id')->references('id')->on('artikels');
             $table->string('isi_pesan');
             $table->timestamps();
         });

@@ -51,11 +51,18 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         </div>
     </div>
 </div>
+
 <div class="container">
 <div class="row" >
-
-        <form action="/kritik-saran" method="post">
+@guest
+            <!-- Kalau belum log in -->
+            <a href="/login">Login</a> <h5>untuk berkomentar</h5>
+            @else
+            <!-- Kalau sudah log in -->
+            @if(Auth::user())
+            <form action="/kritik-saran" method="post">
         @csrf
+        <input type="hidden" name="artikel_id" value="{{$a->id}}">
         <div class="col-8"  style="border-style: solid ;border-radius:10px; padding: 15px; margin-left:4%; margin-bottom:20px;">
             <h1 style="font-size: 30px ;">Kritik dan Saran</h1>
                 <div class="row" style="margin:10px">
@@ -72,6 +79,9 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
                 </div>
         </div>
         </form>
+            @endif
+@endguest
+        
 </div>
 @endforeach
 @endsection

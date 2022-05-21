@@ -62,9 +62,16 @@
                 </button>
             </form>
             <div style="margin-left:10px;">
-                <a href="">
-                    <img src="/img/Profil.png" alt="">
+            @guest
+            <a href="">
+                <img src="/img/Profil.png" width="100px">
                 </a>
+            @else
+            <a href="/images/{{Auth::user()->photo}}">
+                <img src="/images/{{Auth::user()->photo}}" width="100px">
+                </a>
+            @endguest
+                
             </div>
             @guest
             <!-- Kalau belum log in -->
