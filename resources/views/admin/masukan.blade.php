@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="col">
+<div class="col" style="margin-bottom:9% ;">
     <h2>Kritik dan saran</h2>
     <table class="table table-bordered">
         <tr>
