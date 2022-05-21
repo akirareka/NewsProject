@@ -64,7 +64,7 @@ class ArtikelController extends Controller
             'isi_pesan' => $request->message,
             'artikel_id'=>$request->artikel_id
         ]);
-        return redirect()->to('/');
+        return redirect()->back()->with('message','Kritik dan saran berhasil dikirimkan');
     }
     
 }

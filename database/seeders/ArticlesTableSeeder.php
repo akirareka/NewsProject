@@ -14,7 +14,7 @@ class ArticlesTableSeeder extends Seeder
     public function run()
     {
         $faker = \Faker\Factory::create();
-        for ($i = 0; $i < 50; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             Artikel::create([
                 'judul' => $faker->sentence,
                 'author' => $faker->name,

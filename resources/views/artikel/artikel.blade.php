@@ -17,6 +17,7 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 <div class="container">
     <div class="row">
         <div class="col-9">
+        @include('message')
             @foreach($artikel as $a)
             <div class="col text-center mb-5">
                 <p class="h1">{{$a->judul}}</p>

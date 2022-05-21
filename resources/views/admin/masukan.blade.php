@@ -15,7 +15,7 @@
             <td>{{ $loop->iteration }}</td>
             <td>{{ $m->user_name }}</td>
             <td>{{ $m->user_email }}</td>
-            <td>{{ $m->artikel_judul }}</td>
+            <td><a href="/artikel/read/{{ $m->artikel_id }}">{{ $m->artikel_judul }}</a></td>
             <td>{{ $m->isi_pesan }}</td>
         </tr>
         @endforeach
