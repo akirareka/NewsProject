@@ -87,15 +87,15 @@ class ArtikelsController extends Controller
             'ringkasan' => $request->ringkasan,
             ]);
         }else{
-            $foto = $request->file('foto');
-            $foto->storeAs('/article/img', $foto->hashName(), 'public');
+            $filename = round(microtime(true) * 1000).'-'.str_replace(' ','-',$request->file('foto')->getClientOriginalName());
+            $request->file('foto')->move(public_path('images'), $filename);
 
             $artikel->update([
                 'judul' => $request->judul,
                 'category' => $request->category,
                 'author' => $request->author,
                 'isi_artikel' => $request->isi_artikel,
-                'foto' => $foto->hashName(),
+                'foto' => $filename,
                 'ringkasan' => $request->ringkasan,
             ]);
         }
