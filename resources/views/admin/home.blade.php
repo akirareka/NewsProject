@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="container" style="margin-bottom: 150px ;">
+<div class="container" style="margin-bottom: 86px ;">
     <div class="row justify-content-center buttonadmin">
         <a href="/admin/artikel">
             <button>Artikel</button></a>
