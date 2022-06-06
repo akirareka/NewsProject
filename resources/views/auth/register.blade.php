@@ -125,8 +125,7 @@
                                 </div>
                             </div>
 
-                            <input type="hidden" name="role">       
-                            <input id="" type="radio" class="" name="role" required value="User"> user
+                            <input type="hidden" name="role" value="Users">       
 
                             <div class="form-group row register1" >
                                 <div class="col-md-6 ">
