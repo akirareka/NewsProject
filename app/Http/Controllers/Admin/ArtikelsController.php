@@ -19,7 +19,6 @@ class ArtikelsController extends Controller
 
     public function index()
     {
-        if(Auth::check()){
             if(Auth::user()->role == 'Admin'){
                 $artikel = Artikel::latest()->get();
                 return view('admin.artikel.show',compact('artikel'))
@@ -28,14 +27,16 @@ class ArtikelsController extends Controller
                 return redirect()->to('home')
                         ->with('error', 'Anda tidak memiliki akses');
             }
-        }else{
-            return view('auth.login')
-                        ->with('error', 'Mohon login terlebih dahulu');
-        }
+        
     }
     public function create()
     {
-        return view('admin.artikel.add');
+        if(Auth::user()->role == 'Admin'){
+            return view('admin.artikel.add');
+        }else{
+            return redirect()->to('home')
+                    ->with('error', 'Anda tidak memiliki akses');
+        }
     }
 
     public function store(Request $request)
@@ -65,8 +66,13 @@ class ArtikelsController extends Controller
     
     public function edit($id)
     {
+        if(Auth::user()->role == 'Admin'){
         $artikel = Artikel::where('id',$id)->first();
         return view('admin.artikel.edit', compact('artikel'));
+        }else{
+            return redirect()->to('home')
+                    ->with('error', 'Anda tidak memiliki akses');
+        }
     }
 
     public function update(Request $request)
@@ -105,10 +111,15 @@ class ArtikelsController extends Controller
     }
 
     public function destroy($id)
-    {
-        Masukan::where('artikel_id',$id)->delete();
-        $post = Artikel::findOrFail($id);
-        $post->delete();
-        return redirect()->to('admin/artikel');
+    {  
+        if(Auth::user()->role == 'Admin'){
+            Masukan::where('artikel_id',$id)->delete();
+            $post = Artikel::findOrFail($id);
+            $post->delete();
+            return redirect()->to('admin/artikel');
+        }else{
+            return redirect()->to('home')
+                    ->with('error', 'Anda tidak memiliki akses');
+        }
     }
 }

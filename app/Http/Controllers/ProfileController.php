@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -27,36 +28,53 @@ class ProfileController extends Controller
 
     public function update(Request $request)
     {
-        // $this->validate($request, [
-        //     'name' => 'required',
-        //     'email' => 'required',
-        //     'password' => 'required',
-        // ]);
+    
 
         $user = User::findOrFail($request->id);
         if($request->file('photo') == ""){
-            $user->update([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => $request->password,
-            'phone' => $request->phone,
-            'tgl_lahir' => $request->tgl_lahir,
-            'jenis_kelamin' => $request->jenis_kelamin,
+            if($request->password =="" ){
+                $user->update([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'phone' => $request->phone,
+                    'tgl_lahir' => $request->tgl_lahir,
+                    'jenis_kelamin' => $request->jenis_kelamin,
+                    ]);
+            }else{
+                $user->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'phone' => $request->phone,
+                'tgl_lahir' => $request->tgl_lahir,
+                'jenis_kelamin' => $request->jenis_kelamin,
             ]);
+            }
         }else{
             if ($request->hasfile('photo')) {            
                 $filename = round(microtime(true) * 1000).'-'.str_replace(' ','-',$request->file('photo')->getClientOriginalName());
                 $request->file('photo')->move(public_path('images'), $filename);
             }
-            $user->update([
-                'name' => $request->name,
-                'email' => $request->email,
-                'password' => $request->password,
-                'phone' => $request->phone,
-                'tgl_lahir' => $request->tgl_lahir,
-                'jenis_kelamin' => $request->jenis_kelamin,
-                'photo' => $filename,
-            ]);
+            if($request->password =="" ){
+                $user->update([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'phone' => $request->phone,
+                    'tgl_lahir' => $request->tgl_lahir,
+                    'jenis_kelamin' => $request->jenis_kelamin,
+                    'photo' => $filename,
+                ]);
+            }else{
+                $user->update([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'password' => Hash::make($request->password),
+                    'phone' => $request->phone,
+                    'tgl_lahir' => $request->tgl_lahir,
+                    'jenis_kelamin' => $request->jenis_kelamin,
+                    'photo' => $filename,
+                ]);
+            }
 
         }
         return redirect()->to('/profile');
