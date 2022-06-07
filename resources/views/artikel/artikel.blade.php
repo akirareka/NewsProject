@@ -23,7 +23,7 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
                 <p class="h1">{{$a->judul}}</p>
             </div>
             <div class="col-12 text-center mb-5 imgartikel">
-                <img class="artikel" src="{{url("/images/{$a->foto}")}}" width="100" alt="Foto {{$a->judul}}">
+                <img class="artikel" src="/images/{{$a->foto}}" width="100" alt="Foto {{$a->judul}}">
             </div>
             <div class="col-12 mb-5">
                 <div class="card">
@@ -55,6 +55,21 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
 <div class="container">
 <div class="row" >
+<div class="col" style="margin-bottom:3% ;">
+    <h2>Komentar</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>Pengirim</th>
+            <th>Isi pesan</th>
+        </tr>
+        @foreach($masukan as $m)
+        <tr>
+            <td>{{ $m->user_name }}</td>
+            <td>{{ $m->isi_pesan }}</td>
+        </tr>
+        @endforeach
+    </table>
+</div>
 @guest
             <!-- Kalau belum log in -->
             <a href="/login">Login</a> <h5>untuk berkomentar</h5>

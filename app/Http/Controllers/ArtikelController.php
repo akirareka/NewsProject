@@ -53,7 +53,12 @@ class ArtikelController extends Controller
     public function read($id)
     {
         $artikel = DB::table('artikels')->where('id',$id)->get();
-        return view('artikel.artikel',['artikel'=>$artikel]);
+        $masukan = DB::table('masukan')
+        ->where('artikel_id',$id)
+        ->join('users', 'users.id', '=', 'masukan.user_id')
+        ->select('masukan.*','users.name as user_name')
+        ->get();
+        return view('artikel.artikel',['artikel'=>$artikel,'masukan'=>$masukan]);
     }
 
     public function inputMasukan(Request $request)
