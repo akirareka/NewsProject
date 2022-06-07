@@ -19,8 +19,8 @@ class ArtikelController extends Controller
 
     public function find(Request $request)
     {
-        $s= strtolower($request->s);
-        $artikel= Artikel::where('judul', 'like',"%".$s."%")->get();
+        $s= $request->s;
+        $artikel= Artikel::where('judul', 'ilike',"%".$s."%")->get();
         return view ('artikel.home',['artikel'=>$artikel]);
     }
 
