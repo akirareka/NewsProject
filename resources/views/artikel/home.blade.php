@@ -67,7 +67,7 @@ object-position: center;
                                     </a>
                                 </div>
                                 <div class="col-4 news" style="">
-                                    <a href="/artikel/read/{{$a->id}}"> <img src="/images/{{$a->photo}}" width="100px" alt="Images"></a>
+                                    <a href="/artikel/read/{{$a->id}}"> <img src="/images/{{$a->foto}}" width="100px" alt="Images"></a>
                                 </div>
                                 <div class="col news" style="">
                                     <t>{{$a->created_at->format('d-m-Y H:i')}}</t>
